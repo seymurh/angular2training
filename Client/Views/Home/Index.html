@@ -1,0 +1,37 @@
+<div class="col-md-8 col-md-offset-2 ">
+    <div>
+        <h1>Home Index</h1>
+        <h2>{{name}}</h2>
+    </div>
+    <div *ngIf="artists">
+        <h2>List of artists</h2>
+        <button type="button" (click)="AddArtist(false)" class="btn btn-success">Add +</button>
+        <ul>
+            <li *ngFor="#artist of artists">{{artist.Name}} {{artist.Surname}} {{artist.Amount}}
+                <button type="button" class="btn btn-danger" (click)="deleteArtist(artist)">delete</button>
+                <button type="button" class="btn btn-primary" (click)="updateArtist(artist)" >update</button>
+            </li>
+        </ul>
+    </div>
+    <form [ngFormModel]="artist" (ngSubmit)="AddArtist(artist.value)"   id="artistform" *ngIf="openAddArtistForm">
+    <!--<form #artist="ngForm" (ngSubmit)="AddArtist(artist.value)"   id="artistform" *ngIf="openAddArtistForm">-->
+        <div  class="form-group">
+            <label class="control-label">Name</label>
+            <input type="text"  ngControl="Name" class="form-control"/>
+        </div>
+        <div  class="form-group">
+            <label class="control-label">Surname</label>
+            <input type="text"  ngControl="Surname" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Amount</label>
+            <input type="number" ngControl="Amount" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+    <div *ngIf="artist" class="alert-warning">
+        <h3>{{artist.Name}} {{artist.Surname}} {{artist.Amount}}</h3>
+    </div>
+</div>
+<

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script src="js/lib/angular2/es6-shim.min.js"></script>
+    <script src="js/lib/angular2/system-polyfills.js"></script>
+    <script src="js/lib/angular2/angular2-polyfills.js"></script>
+    <script src="js/lib/angular2/system.src.js"></script>
+    <script src="js/lib/angular2/Rx.js"></script>
+    <script src="js/lib/angular2/angular2.dev.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/app.component.js.map"></script>-->
+    <!--<script src="js/app.component.js"></script>-->
+    <script>
+        System.config({
+            packages: {
+                js: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('js/boot')
+                .then(null, console.error.bind(console));
+    </script>
+</head>
+<body>
+<!--<my-app></my-app>-->
+<!--<main></main>-->
+<observ></observ>
+<div id="k">
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+//        $.get("./temp.html").done(function(data){
+//            $('k').innerHTML=data;
+//        });
+    });
+</script>
+</body>
+</html>

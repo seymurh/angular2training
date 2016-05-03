@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="projection row">
+    <div class="col-md-offset-2 col-md-8">
 
-</body>
-</html>
+
+    <h1>Projection header</h1>
+    <div class="col-md-8 col-md-offset-2">
+        <ng-content select=".first"></ng-content>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <ng-content select=".second"></ng-content>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-danger">
+          <ng-content select=".third"></ng-content>
+        </div>
+    </div>
+        <div class="col-md-8 col-md-offset-2">
+            <ng-content select="ul"></ng-content>
+        </div>
+
+    </div>
+</div>
