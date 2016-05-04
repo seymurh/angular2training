@@ -12,6 +12,7 @@
     <script src="js/lib/angular2/angular2.dev.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/lib/angular2/http.dev.js"></script>-->
     <!--<script src="js/app.component.js.map"></script>-->
     <!--<script src="js/app.component.js"></script>-->
     <script>
@@ -23,14 +24,23 @@
                 }
             }
         });
-        System.import('js/boot')
+//        System.config({
+//            transpiler: 'typescript',
+//            typescriptOptions: { emitDecoratorMetadata: true },
+//            packages: {'app': {defaultExtension: 'ts'}}
+//        });
+//        System.import('js/boot')
+//                .then(null, console.error.bind(console));
+System.import('js/boot')
                 .then(null, console.error.bind(console));
+
     </script>
 </head>
 <body>
-<!--<my-app></my-app>-->
+<my-app></my-app>
 <!--<main></main>-->
-<observ></observ>
+<!--<observ></observ>-->
+<http></http>
 <div id="k">
 
 </div>
