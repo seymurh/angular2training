@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/http', 'rxjs/Rx'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,26 +10,41 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, http_1;
     var HttpComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            }],
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+            },
+            function (_1) {}],
         execute: function() {
             //import {Http} from "angular2/http";
             HttpComponent = (function () {
-                function HttpComponent() {
+                function HttpComponent(http) {
+                    var _this = this;
+                    //:Array<number>
+                    this.doctors = [];
                     this.response = null;
-                    this.response = "hey";
+                    http.get('http://jsonplaceholder.typicode.com/users/')
+                        .flatMap(function (data) { return data.json(); })
+                        .filter(function (person) { return person.id > 5; })
+                        .map(function (person) { return "Dr. " + person.name; })
+                        .subscribe(function (data) {
+                        _this.doctors.push(data);
+                    });
+                    //  this.response="hey"; //
                 }
                 HttpComponent = __decorate([
                     core_1.Component({
                         selector: 'http',
-                        template: "\n<b>Angular 2 HTTP requests using RxJs Observables!</b>\n<div><h1>{{response}}</h1></div>\n"
+                        providers: [http_1.HTTP_PROVIDERS],
+                        template: "\n    <div class=\"row\">\n        <div class=\"col-md-8 col-md-offset-2\">\n            <b>Angular 2 HTTP requests using RxJs Observables!</b>\n            <span *ngFor=\"#doctor of doctors\" class=\"alert-danger\"><h1> {{doctor}}</h1></span>\n        </div>\n    </div>\n"
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [http_1.Http])
                 ], HttpComponent);
                 return HttpComponent;
             }());

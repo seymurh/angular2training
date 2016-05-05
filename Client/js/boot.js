@@ -14,6 +14,7 @@ System.register(['angular2/platform/browser', './Main/app.component', './Main/ht
                 http_component_1 = http_component_1_1;
             }],
         execute: function() {
+            //import {Http, HTTP_PROVIDERS} from 'angular2/http';
             browser_1.bootstrap(app_component_1.AppComponent);
             //bootstrap(MainComponent);
             //bootstrap(ObservComponent);
