@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <script src="js/lib/angular2/es6-shim.min.js"></script>
     <script src="js/lib/angular2/system-polyfills.js"></script>
     <script src="js/lib/angular2/angular2-polyfills.js"></script>
@@ -24,14 +24,14 @@
                 }
             }
         });
-//        System.config({
-//            transpiler: 'typescript',
-//            typescriptOptions: { emitDecoratorMetadata: true },
-//            packages: {'app': {defaultExtension: 'ts'}}
-//        });
-//        System.import('js/boot')
-//                .then(null, console.error.bind(console));
-System.import('js/boot')
+        //        System.config({
+        //            transpiler: 'typescript',
+        //            typescriptOptions: { emitDecoratorMetadata: true },
+        //            packages: {'app': {defaultExtension: 'ts'}}
+        //        });
+        //        System.import('js/boot')
+        //                .then(null, console.error.bind(console));
+        System.import('js/boot')
                 .then(null, console.error.bind(console));
 
     </script>
@@ -40,12 +40,15 @@ System.import('js/boot')
 <my-app></my-app>
 <!--<main></main>-->
 <!--<observ></observ>-->
-<http></http>
-<div id="k">
+<!--<http></http>-->
 
+<!--<search></search>-->
+<div class="row">
+    <cold></cold>
 </div>
+
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
 
 //        $.get("./temp.html").done(function(data){
 //            $('k').innerHTML=data;
