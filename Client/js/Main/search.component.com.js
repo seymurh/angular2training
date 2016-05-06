@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/common', '../services/Search', 'angular2/http', 'rxjs/Rx'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/common', '../services/Search', '@angular/http', 'rxjs/Rx'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -45,7 +45,7 @@ System.register(['angular2/core', 'angular2/common', '../services/Search', 'angu
                     core_1.Component({
                         selector: 'search',
                         template: "\n    <form [ngFormModel]=\"coolForm\" >\n        <div class=\"form-group\">\n            <label class=\"control-label\">Axtar</label>\n            <input class=\"form-control\" ngControl=\"search\" placeholder=\"Search Spotify artist\" />\n        </div>\n    </form>\n    <div class=\"col-md-offset-2 col-md-4\" *ngFor=\"#artist of result\">\n      <span class=\"alert-success\">\n         {{artist.name}}\n      </span>\n    </div>\n    ",
-                        providers: [Search_1.SearchService, http_1.HTTP_BINDINGS]
+                        providers: [Search_1.SearchService, http_1.HTTP_PROVIDERS]
                     }), 
                     __metadata('design:paramtypes', [Search_1.SearchService, common_1.FormBuilder])
                 ], SearchComponent);

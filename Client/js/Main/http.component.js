@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/http', 'rxjs/Rx'], function(exports_1, context_1) {
+System.register(["@angular/core", '@angular/http', 'rxjs/Rx'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22,7 +22,7 @@ System.register(["angular2/core", 'angular2/http', 'rxjs/Rx'], function(exports_
             },
             function (_1) {}],
         execute: function() {
-            //import {Http} from "angular2/http";
+            //import {Http} from "@angular/http";
             HttpComponent = (function () {
                 function HttpComponent(http) {
                     var _this = this;

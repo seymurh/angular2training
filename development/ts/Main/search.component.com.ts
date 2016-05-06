@@ -1,10 +1,11 @@
 /**
  * Created by seymour.h on 05/05/2016.
  */
-import {Component} from 'angular2/core';
-import {Control,ControlGroup,FormBuilder} from 'angular2/common';
+import {Component} from '@angular/core';
+import {Control,ControlGroup,FormBuilder} from '@angular/common';
 import {SearchService} from '../services/Search';
-import {HTTP_BINDINGS} from 'angular2/http';
+import {HTTP_BINDINGS,HTTP_PROVIDERS} from '@angular/http';
+
 import 'rxjs/Rx';
 
 @Component({
@@ -22,7 +23,7 @@ import 'rxjs/Rx';
       </span>
     </div>
     `,
-    providers:[SearchService,HTTP_BINDINGS]
+    providers:[SearchService,HTTP_PROVIDERS]
 })
 export class SearchComponent {
     searchField:Control;

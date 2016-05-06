@@ -1,7 +1,7 @@
 /**
  * Created by seymour.h on 04/28/2016.
  */
-import {Component,EventEmitter} from 'angular2/core';
+import {Component,EventEmitter} from '@angular/core';
 
 
 @Component({

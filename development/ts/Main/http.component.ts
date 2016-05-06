@@ -1,10 +1,11 @@
 /**
  * Created by seymour.h on 05/03/2016.
  */
-import {Component} from "angular2/core";
-import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import {Component} from "@angular/core";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {Http,HTTP_PROVIDERS} from '@angular/http';
 import 'rxjs/Rx';
-//import {Http} from "angular2/http";
+//import {Http} from "@angular/http";
 
 
 @Component({

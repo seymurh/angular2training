@@ -1,7 +1,7 @@
 /**
  * Created by seymour.h on 04/28/2016.
  */
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {EventComponent} from './event.component';
 import {Counter2WayComponent} from './counter2way.component';
 import {ProjectionComponent} from './projection.component';

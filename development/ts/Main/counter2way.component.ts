@@ -1,7 +1,7 @@
 /**
  * Created by seymour.h on 04/28/2016.
  */
-import {Component,Input,Output,EventEmitter} from 'angular2/core';
+import {Component,Input,Output,EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'counter2way',

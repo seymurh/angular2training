@@ -1,7 +1,7 @@
 /**
  * Created by seymour.h on 05/05/2016.
  */
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
