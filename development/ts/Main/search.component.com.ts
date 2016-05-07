@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
 import {Control,ControlGroup,FormBuilder} from '@angular/common';
 import {SearchService} from '../services/Search';
 import {HTTP_BINDINGS,HTTP_PROVIDERS} from '@angular/http';
-
+import {ROUTER_DIRECTIVES,RouteConfig} from '@angular/router-deprecated';
 import 'rxjs/Rx';
 
 @Component({

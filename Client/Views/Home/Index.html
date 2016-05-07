@@ -1,11 +1,11 @@
-<div class="col-md-8 col-md-offset-2 ">
+<div class="col-md-8 col-md-offset-2">
     <div>
         <h1>Home Index</h1>
         <h2>{{name}}</h2>
     </div>
     <div *ngIf="artists">
         <h2>List of artists</h2>
-        <button type="button" (click)="AddArtist(false)" class="btn btn-success">Add +</button>
+        <button type="button" (click)="AddArtist(false)" class="btn btn-success">Add + </button>
         <ul>
             <li *ngFor="#artist of artists">{{artist.Name}} {{artist.Surname}} {{artist.Amount}}
                 <button type="button" class="btn btn-danger" (click)="deleteArtist(artist)">delete</button>
@@ -34,4 +34,3 @@
         <h3>{{artist.Name}} {{artist.Surname}} {{artist.Amount}}</h3>
     </div>
 </div>
-<

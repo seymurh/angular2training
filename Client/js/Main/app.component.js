@@ -1,4 +1,4 @@
-System.register(['@angular/core', "@angular/common"], function(exports_1, context_1) {
+System.register(['@angular/core', "@angular/common", '@angular/router-deprecated'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', "@angular/common"], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, common_2;
+    var core_1, common_1, common_2, router_deprecated_1;
     var AppComponent;
     return {
         setters:[
@@ -20,6 +20,9 @@ System.register(['@angular/core', "@angular/common"], function(exports_1, contex
             function (common_1_1) {
                 common_1 = common_1_1;
                 common_2 = common_1_1;
+            },
+            function (router_deprecated_1_1) {
+                router_deprecated_1 = router_deprecated_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -70,7 +73,8 @@ System.register(['@angular/core', "@angular/common"], function(exports_1, contex
                     core_1.Component({
                         selector: 'my-app',
                         templateUrl: 'Views/Home/Index.html',
-                        directives: [common_1.FORM_DIRECTIVES]
+                        directives: [common_1.FORM_DIRECTIVES, router_deprecated_1.ROUTER_DIRECTIVES],
+                        providers: [router_deprecated_1.ROUTER_PROVIDERS]
                     }), 
                     __metadata('design:paramtypes', [common_2.FormBuilder])
                 ], AppComponent);

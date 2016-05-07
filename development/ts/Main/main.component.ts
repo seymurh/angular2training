@@ -5,6 +5,7 @@ import {Component} from '@angular/core';
 import {EventComponent} from './event.component';
 import {Counter2WayComponent} from './counter2way.component';
 import {ProjectionComponent} from './projection.component';
+import {RouteConfig} from '@angular/router-deprecated'
 
 @Component({
     selector: 'main',

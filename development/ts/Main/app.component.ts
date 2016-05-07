@@ -6,6 +6,7 @@ import {Component} from '@angular/core';
 import {FORM_DIRECTIVES} from "@angular/common";
 import {FormBuilder} from "@angular/common";
 import {Validators} from "@angular/common";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 interface  Artist{
         Name:String;
@@ -16,7 +17,8 @@ interface  Artist{
 @Component({
         selector:'my-app',
         templateUrl:'Views/Home/Index.html',
-        directives:[FORM_DIRECTIVES]
+        directives:[FORM_DIRECTIVES,ROUTER_DIRECTIVES],
+        providers:[ROUTER_PROVIDERS]
 })
 export class AppComponent{
         name:String="binging";
