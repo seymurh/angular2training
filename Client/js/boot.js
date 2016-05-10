@@ -24,6 +24,7 @@ System.register(['@angular/platform-browser-dynamic', '@angular/router-deprecate
         }
     }
 });
+//bootstrap(FactoryInjectComponent,[provide('Random',randomDefinition)]);
 ///
 //Router.config([
 //    { 'path': '/', 'component': AppComponent },

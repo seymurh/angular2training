@@ -10,6 +10,8 @@ import {ObservComponent} from './Main/observ.component';
 import {HttpComponent} from './Main/http.component';
 import {SearchComponent} from './Main/search.component.com';
 import {ColdObservableComponent} from './Main/cold.observable.component';
+import {FactoryInjectComponent} from './Main/FactoryInject';
+import {randomDefinition} from './services/Random';
 
 @RouteConfig([
     { path: '/AppComponent',as:"AppComponent", component: AppComponent, useAsDefault: true },
@@ -17,7 +19,8 @@ import {ColdObservableComponent} from './Main/cold.observable.component';
     { path: '/main',as:"MainComponent", component: MainComponent, useAsDefault: false  },
     { path: '/observe',as:"ObservComponent", component: ObservComponent, useAsDefault: false  },
     { path: '/http',as:"HttpComponent", component: HttpComponent, useAsDefault: false  },
-    { path: '/cold',as:"ColdObservableComponent", component: ColdObservableComponent, useAsDefault: false  }
+    { path: '/cold',as:"ColdObservableComponent", component: ColdObservableComponent, useAsDefault: false  },
+    {path:'/factory',as:'FactoryInjectComponent',component:FactoryInjectComponent,useAsDefault:false}
    // { path: '/**', redirectTo: ['Home'] }
 ])
 @Component({
@@ -32,7 +35,7 @@ import {ColdObservableComponent} from './Main/cold.observable.component';
 	  <li><a [routerLink]="['./HttpComponent']">HttpComponent</a></li>
 	  <li><a [routerLink]="['./SearchComponent']">SearchComponent</a></li>
 	  <li><a [routerLink]="['./ColdObservableComponent']">ColdObservableComponent</a></li>
-
+      <li><a [routerLink]="['./FactoryInjectComponent']">Factory Inject</a></li>
 	</ul>
 	<div style="border: 1px solid black">
 	  <router-outlet></router-outlet>

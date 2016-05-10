@@ -10,8 +10,11 @@ import {SearchComponent} from './Main/search.component.com';
 import {ColdObservableComponent} from './Main/cold.observable.component';
 import {Http, HTTP_PROVIDERS} from '@angular/http';
 import {Route,RouteConfig,Router,ROUTER_DIRECTIVES,ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {randomDefinition} from './services/Random';
 
+import {provide} from '@angular/core';
 import {RoutingComponent} from './routing';
+import {FactoryInjectComponent} from "./Main/FactoryInject";
 
 //bootstrap(AppComponent);
 //bootstrap(MainComponent);
@@ -20,6 +23,7 @@ import {RoutingComponent} from './routing';
 //bootstrap(SearchComponent);
 //bootstrap(ColdObservableComponent);//
 bootstrap(RoutingComponent,[ROUTER_PROVIDERS]);
+//bootstrap(FactoryInjectComponent,[provide('Random',randomDefinition)]);
 ///
 //Router.config([
 //    { 'path': '/', 'component': AppComponent },
