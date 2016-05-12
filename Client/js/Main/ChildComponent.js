@@ -1,4 +1,4 @@
-System.register(['@angular/core'], function(exports_1, context_1) {
+System.register(['@angular/core', '../services/IdProvider'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -13,34 +13,35 @@ System.register(['@angular/core'], function(exports_1, context_1) {
     var __param = (this && this.__param) || function (paramIndex, decorator) {
         return function (target, key) { decorator(target, key, paramIndex); }
     };
-    var core_1;
-    var randomFactory, randomDefinition, FactoryInjectComponent;
+    var core_1, IdProvider_1;
+    var ChildComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (IdProvider_1_1) {
+                IdProvider_1 = IdProvider_1_1;
             }],
         execute: function() {
-            randomFactory = function () { return Math.random(); };
-            randomDefinition = { useFactory: randomFactory };
-            FactoryInjectComponent = (function () {
-                function FactoryInjectComponent(r) {
-                    this.random = r;
+            ChildComponent = (function () {
+                function ChildComponent(id) {
+                    this.Id = id;
                 }
-                FactoryInjectComponent = __decorate([
+                ChildComponent = __decorate([
                     core_1.Component({
-                        selector: 'factory',
-                        template: "\n        <div class=\"alert-info\">\n         {{random}}\n         </div>\n    ",
-                        providers: [core_1.provide('Random', randomDefinition)]
+                        selector: "child",
+                        template: "\n        <div class=\"alert-success\">\n         Child Id {{ Id}}\n        </div>\n    ",
+                        providers: [IdProvider_1.IdProvider]
                     }),
-                    __param(0, core_1.Inject('Random')), 
-                    __metadata('design:paramtypes', [Number])
-                ], FactoryInjectComponent);
-                return FactoryInjectComponent;
+                    __param(0, core_1.Inject('Id')), 
+                    __metadata('design:paramtypes', [Object])
+                ], ChildComponent);
+                return ChildComponent;
             }());
-            exports_1("FactoryInjectComponent", FactoryInjectComponent);
+            exports_1("ChildComponent", ChildComponent);
         }
     }
 });
 
-//# sourceMappingURL=FactoryInject.js.map
+//# sourceMappingURL=ChildComponent.js.map
